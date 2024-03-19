@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "General Sans Medium";
+    box-sizing: border-box;
+    /* CSS box-sizing enables you to define how you want the height and width of an element to be calculated. It means that you can use this property to specify whether the padding or border of the element should be included in the height and width or not. */
+}
+
+html,body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: #f5f5f5;
+}
+#minicircle
+{ 
+    pointer-events: none;
+    /* turn off the mouse cursor event for this mini circle was causing a bug */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     position: absolute !important;
+    /*top:0;
+    left: 0; */
+    transform: translate(-50%,-50%)  ;
+    z-index: 999;
+    /* sob theke top e */
+    background-color: #fff;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    /* A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state. */
+}
+#view{
+    pointer-events: none;
+display: none;
+z-index: 9999;
+color: black !important;
+}
+.bounding
+{
+    width: fit-content;
+    overflow: hidden;
+    /* background-color: red; */
+}
+.boundingelem
+{
+    transform: translateY(100%);
+}
+#main
+{
+    width: 100%;
+}
+#home
+{
+    width: 100%;
+    height: 100vh;
+    /* vh actually calculates according to screensize */
+    color: whitesmoke;
+    position: relative;
+}
+#nav
+{
+    display: flex;
+    /* to align items side by side */
+    align-items: center;
+    /* justify-content: center; add all elements to centre */
+    justify-content: space-between;
+    /* font-size: 24px !important; */
+    width: 100%;
+    padding: 20px 40px;
+    color: whitesmoke;
+    transition: all 1s;
+}
+#nav a{
+    text-decoration: none;
+    font-size: 16px ;
+    color: whitesmoke;
+}
+#nav h4:hover{
+    text-decoration: underline;
+}
+#heading
+{
+    margin-top: 117px;
+}
+#heading h1{
+    line-height: 1;
+    margin-left: 30px;
+    opacity: .6;
+    /* decrease the opacity of the text */
+    /* so that it does not take any line height */
+    font-weight: 900;
+    font-size: 10vw;
+    /* font-family: "General Sans Medium"; */
+    /* according to width of the screen */
+    text-transform: uppercase;
+    /* converts a string to uppercase */
+}
+.blocktext{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: 12vw;
+    /* background-color: aqua; */
+}
+.blocktext h5{
+    font-size: 15px;
+}
+#smallhead{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 30px;
+    line-height: 2;
+    padding-right: 30px;
+}
+#smallhead h5
+{
+    font-size: 1.3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#footer{
+    padding: 1vw;
+    width: 100%;
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* bottom: 1% !important; */
+}
+#footer a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#footer a:hover
+{
+    text-decoration: underline;
+}
+#footer a i{
+    position: absolute;
+}
+#iconset
+{
+    display: flex;
+    gap: 5px;
+}
+#iconset .circle{
+    cursor: pointer;
+    font-weight: 1000;
+    color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 25px;
+    height: 25px;
+    /* position: relative; */
+    border-radius: 50%;
+    background-color: #888
+}
+#iconset .circle i{
+    pointer-events: none;
+}
+/* #iconset .circle i:hover{
+    transform: translateY(-100%);
+} */
+#second
+{
+    /* background-color: brown; */
+    width:  100%;
+    height: fit-content;
+    padding-top: 15vh;
+    padding-left: 0.1vw;
+}
+.elem
+{
+    position: relative;
+    cursor: pointer !important;
+    width: 90%;
+    /* background-color: red; */
+    text-transform: uppercase;
+    border-top: 1px solid #888;
+    padding: 3.5vw 0;
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.elem h1{
+    opacity: 0.6;
+    font-size: 8vw;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+#elemlast {
+    border-bottom: 1px solid #888;
+}
+.elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-60%, -50%);
+}
+#about{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 40px;
+    width: 100%;
+    /* height: 100vh; */
+    
+    padding: 15vw 12vw;
+    padding-left: 30vw;
+}
+#abouttext
+{
+    /* background-color: red; */
+    width: 250 rem;
+    line-height: 1.3;
+}
+#abouttext p{
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+#abouttext h5{
+    margin-bottom: 8px;
+    opacity: .6;
+    text-transform: uppercase;
+}
+#abouttext a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    /* border-radius: 50%; */
+    border-radius: 100px;
+}
+#about img{
+    /* background-color: #888; */
+    width: 15rem;
+    border-radius: 50%;
+}
+#subscribe
+{
+    padding: 100px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+#subscribe :nth-child(1){
+    opacity: .6;
+    cursor: default !important;
+}
+#footabout{
+    /* background-color: blue; */
+    text-transform: uppercase;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    /* padding-top: 70px; */
+    /* position: absolute;
+    bottom: 2%; */
+    width: 100%;
+}
+#footleft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    font-size: 20px;
+}
+#footright
+{
+    display: flex;
+    gap: 5px
+}
+#footabout a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}

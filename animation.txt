@@ -1,0 +1,7 @@
+|1. Smooth scrolling(locomotive js)
+first get the css file from github and then copy the js of smooth part then copy the cdn of locomotive js that is min js
+2. gsap
+attach gsap cdn js
+it is used to animate the texts in home
+3. scroll trigger
+icons from remix icon
